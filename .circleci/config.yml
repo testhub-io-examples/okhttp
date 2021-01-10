@@ -48,11 +48,11 @@ commands:
           path: ~/test-results
           
       - run:
-        name: Push to Testhub
-        command: |
-          wget https://github.com/testhub-io/testhub-cli/releases/download/v0.10/testhub-cli_v0.10_linux_386.tar.gz
-          tar -xf ./testhub-cli_v0.10_linux_386.tar.gz
-          ./testhub-cli upload -t $TESTHUB_TOKEN -b $CIRCLE_BUILD_NUM --branch $CIRCLE_BRANCH -p testhub-io-examples/okhttp -f ~/test-results/junit/*.xml
+          name: Push to Testhub
+          command: |
+            wget https://github.com/testhub-io/testhub-cli/releases/download/v0.10/testhub-cli_v0.10_linux_386.tar.gz
+            tar -xf ./testhub-cli_v0.10_linux_386.tar.gz
+            ./testhub-cli upload -t $TESTHUB_TOKEN -b $CIRCLE_BUILD_NUM --branch $CIRCLE_BRANCH -p testhub-io-examples/okhttp -f ~/test-results/junit/*.xml
 
       - run:
           name: Save gradle reports
