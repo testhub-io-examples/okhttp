@@ -35,7 +35,7 @@ Here
 
 #### View on Testhub
 
-Navigate to https://test-hub.io/<org>/projects/<repo>/runs
+Navigate to `https://test-hub.io/<org>/projects/<repo>/runs`
 
 For example
 
